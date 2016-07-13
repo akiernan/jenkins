@@ -1,0 +1,9 @@
+---
+
+version: 4
+datadir: "hieradata"
+hierarchy:
+  - name: "common"
+    backend: yaml
+
+
