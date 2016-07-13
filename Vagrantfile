@@ -4,6 +4,8 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "boxcutter/ubuntu1604"
 
+  config.vm.network "forwarded_port", guest: 8080, host: 8088
+
   # http://foo-o-rama.com/vagrant--stdin-is-not-a-tty--fix.html
   config.vm.provision "fix-no-tty", type: "shell", privileged: false,
                       path: "vagrant/fix-no-tty.sh"
