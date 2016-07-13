@@ -1,6 +1,15 @@
 ---
-#packages:
-  # uncomment the packages line and add your list of packages here
-  # - git
-  # - sqlite3
-  # etc.
+packages:
+  - git
+  - jenkins
+apt::sources:
+  'jenkins_binary':
+    comment: 'Jenkins Debian repo'
+    location: 'http://pkg.jenkins-ci.org/debian-stable'
+    release: 'binary/'
+    repos: ''
+    key:
+      id: '150FDE3F7787E7D11EF4E12A9B7D32F2D50582E6'
+    include:
+      src: false
+      deb: true
