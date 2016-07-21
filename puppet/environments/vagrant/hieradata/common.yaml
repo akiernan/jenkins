@@ -1,6 +1,7 @@
 ---
 packages:
   - git
+  - tox
 jenkins_packages:
   - workflow-support
   - pipeline-stage-view
