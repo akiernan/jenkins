@@ -3,25 +3,36 @@ packages:
   - git
 jenkins_packages:
   - workflow-support
+  - pipeline-stage-view
   - junit
   - parameterized-trigger
+  - workflow-durable-task-step
   - workflow-api
   - branch-api
   - workflow-job
   - git
   - git-client
   - workflow-cps
+  - workflow-aggregator
   - github-api
   - ssh-credentials
   - cloudbees-folder
   - plain-credentials
   - workflow-multibranch
+  - pipeline-rest-api
   - scm-api
+  - momentjs
+  - durable-task
+  - workflow-basic-steps
+  - pipeline-stage-step
   - matrix-project
   - credentials
+  - git-server
+  - workflow-cps-global-lib
   - structs
   - ace-editor
   - script-security
+  - pipeline-input-step
   - token-macro
   - mailer
   - promoted-builds
@@ -30,6 +41,8 @@ jenkins_packages:
   - github-organization-folder
   - workflow-scm-step
   - jquery-detached
+  - pipeline-build-step
+  - handlebars
   - workflow-step-api
   - github-branch-source
 python::virtualenv: present
