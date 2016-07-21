@@ -1,15 +1,36 @@
 ---
 packages:
   - git
-  - jenkins
-apt::sources:
-  'jenkins_binary':
-    comment: 'Jenkins Debian repo'
-    location: 'http://pkg.jenkins-ci.org/debian-stable'
-    release: 'binary/'
-    repos: ''
-    key:
-      id: '150FDE3F7787E7D11EF4E12A9B7D32F2D50582E6'
-    include:
-      src: false
-      deb: true
+jenkins_packages:
+  - workflow-support
+  - junit
+  - parameterized-trigger
+  - workflow-api
+  - branch-api
+  - workflow-job
+  - git
+  - git-client
+  - workflow-cps
+  - github-api
+  - ssh-credentials
+  - cloudbees-folder
+  - plain-credentials
+  - workflow-multibranch
+  - scm-api
+  - matrix-project
+  - credentials
+  - structs
+  - ace-editor
+  - script-security
+  - token-macro
+  - mailer
+  - promoted-builds
+  - shiningpanda
+  - github
+  - github-organization-folder
+  - workflow-scm-step
+  - jquery-detached
+  - workflow-step-api
+  - github-branch-source
+python::virtualenv: present
+python::dev: present

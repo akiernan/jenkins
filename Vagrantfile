@@ -24,14 +24,13 @@ Vagrant.configure(2) do |config|
 
   # install puppet modules we need
   config.vm.provision "install-puppet-modules", type: "shell", inline: <<-SHELL
-    for puppet_module in puppetlabs-apt; do
+    for puppet_module in puppetlabs-apt rtyler-jenkins stankevich-python; do
       puppet module install "${puppet_module}"
     done
   SHELL
 
   # finally run puppet
   config.vm.provision "puppet" do |puppet|
-
     puppet.environment = "vagrant"
     puppet.environment_path = "puppet/environments"
   end
