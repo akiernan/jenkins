@@ -1,8 +1,9 @@
 ---
 packages:
   - git
-  - tox
 jenkins_packages:
+  # workflow-aggregator, github-organization-folder, shiningpanda are the things
+  # we really want, everything else is a dependency
   - workflow-support
   - pipeline-stage-view
   - junit
@@ -46,5 +47,4 @@ jenkins_packages:
   - handlebars
   - workflow-step-api
   - github-branch-source
-python::virtualenv: present
 python::dev: present
