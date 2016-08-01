@@ -2,10 +2,11 @@
 packages:
   - git
 jenkins_packages:
-  # workflow-aggregator, github-organization-folder, shiningpanda are the things
+  # workflow-aggregator, docker-workflow, github-organization-folder, htmlpublisher are the things
   # we really want, everything else is a dependency
   - workflow-support
   - pipeline-stage-view
+  - icon-shim
   - junit
   - parameterized-trigger
   - workflow-durable-task-step
@@ -16,14 +17,18 @@ jenkins_packages:
   - git-client
   - workflow-cps
   - workflow-aggregator
+  - authentication-tokens
   - github-api
   - ssh-credentials
   - cloudbees-folder
+  - htmlpublisher
   - plain-credentials
   - workflow-multibranch
   - pipeline-rest-api
+  - docker-commons
   - scm-api
   - momentjs
+  - docker-workflow
   - durable-task
   - workflow-basic-steps
   - pipeline-stage-step
@@ -48,3 +53,4 @@ jenkins_packages:
   - workflow-step-api
   - github-branch-source
 python::dev: present
+python::virtualenv: present
