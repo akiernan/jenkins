@@ -6,10 +6,12 @@ jenkins_packages:
   # we really want, everything else is a dependency
   - workflow-support
   - pipeline-stage-view
+  - ssh-slaves
   - icon-shim
   - junit
   - parameterized-trigger
   - workflow-durable-task-step
+  - config-file-provider
   - workflow-api
   - branch-api
   - workflow-job
@@ -17,13 +19,19 @@ jenkins_packages:
   - git-client
   - workflow-cps
   - workflow-aggregator
+  - support-core
   - authentication-tokens
   - github-api
+  - job-dsl
   - ssh-credentials
   - cloudbees-folder
+  - run-condition
   - htmlpublisher
+  - metrics
+  - rebuild
   - plain-credentials
   - workflow-multibranch
+  - javadoc
   - pipeline-rest-api
   - docker-commons
   - scm-api
@@ -31,20 +39,28 @@ jenkins_packages:
   - docker-workflow
   - durable-task
   - workflow-basic-steps
+  - jackson2-api
   - pipeline-stage-step
   - matrix-project
+  - node-iterator-api
   - credentials
   - git-server
   - workflow-cps-global-lib
   - structs
   - ace-editor
+  - managed-scripts
   - script-security
   - pipeline-input-step
+  - maven-plugin
+  - subversion
+  - vsphere-cloud
   - token-macro
+  - mapdb-api
   - mailer
   - promoted-builds
-  - shiningpanda
   - github
+  - conditional-buildstep
+  - project-inheritance
   - github-organization-folder
   - workflow-scm-step
   - jquery-detached
@@ -52,5 +68,3 @@ jenkins_packages:
   - handlebars
   - workflow-step-api
   - github-branch-source
-python::dev: present
-python::virtualenv: present

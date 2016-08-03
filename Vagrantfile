@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
 
   # install puppet modules we need
   config.vm.provision "install-puppet-modules", type: "shell", inline: <<-SHELL
-    for puppet_module in puppetlabs-apt rtyler-jenkins stankevich-python garethr-docker; do
+    for puppet_module in puppetlabs-apt rtyler-jenkins garethr-docker; do
       puppet module install "${puppet_module}"
     done
   SHELL
