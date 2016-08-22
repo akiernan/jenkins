@@ -43,7 +43,6 @@ jenkins_packages:
   - pipeline-stage-step
   - matrix-project
   - node-iterator-api
-  - credentials
   - git-server
   - workflow-cps-global-lib
   - structs
