@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
 
   # from https://github.com/hashicorp/puppet-bootstrap
   config.vm.provision "install-puppet", type: "shell",
+                      env: {:PUPPET_COLLECTION => 'pc1'},
                       path: "vagrant/centos_7_x.sh"
 
   # install puppet modules we need

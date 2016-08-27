@@ -4,7 +4,11 @@
 
 set -e
 
-REPO_URL="https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm"
+# if PUPPET_COLLECTION is not prepended with a dash "-", add it
+[[ "${PUPPET_COLLECTION}" == "" ]] || [[ "${PUPPET_COLLECTION:0:1}" == "-" ]] || \
+  PUPPET_COLLECTION="-${PUPPET_COLLECTION}"
+
+REPO_URL="https://yum.puppetlabs.com/puppetlabs-release${PUPPET_COLLECTION}-el-7.noarch.rpm"
 
 if [ "$EUID" -ne "0" ]; then
   echo "This script must be run as root." >&2
